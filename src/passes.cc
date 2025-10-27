@@ -21,6 +21,8 @@ template <typename E>
 int redo_main(Context<E> &ctx, int argc, char **argv) {
   std::string_view target = ctx.arg.emulation;
 
+  return 1;
+  /*
   if (target == I386::name)
     return mold_main<I386>(argc, argv);
   if (target == ARM64LE::name)
@@ -60,6 +62,7 @@ int redo_main(Context<E> &ctx, int argc, char **argv) {
   if (target == LOONGARCH64::name)
     return mold_main<LOONGARCH64>(argc, argv);
   abort();
+  */
 }
 
 template <typename E>
