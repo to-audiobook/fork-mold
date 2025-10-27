@@ -19,10 +19,10 @@ namespace mold {
 // wrong, re-run it with an actual machine type.
 template <typename E>
 int redo_main(Context<E> &ctx, int argc, char **argv) {
-  std::string_view target = ctx.arg.emulation;
-
   return 1;
   /*
+  std::string_view target = ctx.arg.emulation;  
+  
   if (target == I386::name)
     return mold_main<I386>(argc, argv);
   if (target == ARM64LE::name)
