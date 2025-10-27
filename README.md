@@ -1,3 +1,9 @@
+# Fork notes:
+this is the mold you know and love, but we removed all but the x86_64 target
+because that is the only thing we care about. The project now builds 1000x
+faster.
+################################################################################
+
 # mold: A Modern Linker
 
 mold is a faster drop-in replacement for existing Unix linkers. It is several
