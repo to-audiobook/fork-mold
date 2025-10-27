@@ -331,16 +331,10 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 # compiler instances. This is hacky but greatly reduces compile time
 # on a multicore machine.
 list(APPEND MOLD_ELF_TARGETS
-  X86_64 I386 ARM64LE ARM64BE ARM32LE ARM32BE RV32LE RV32BE RV64LE
-  RV64BE PPC32 PPC64V1 PPC64V2 S390X SPARC64 M68K SH4LE SH4BE
-  LOONGARCH32 LOONGARCH64)
+  X86_64
+  )
 
-list(APPEND MOLD_ELF_TEMPLATE_FILES
-  src/arch-arm32.cc
-  src/arch-arm64.cc
-  src/arch-loongarch.cc
-  src/arch-riscv.cc
-  src/arch-sh4.cc
+list(APPEND MOLD_ELF_TEMPLATE_FILES  
   src/archive-file.cc
   src/cmdline.cc
   src/error.cc
@@ -407,14 +401,7 @@ target_sources(mold PRIVATE
   lib/hyperloglog.cc
   lib/perf.cc
   lib/random.cc
-  lib/tar.cc
-  src/arch-i386.cc
-  src/arch-m68k.cc
-  src/arch-ppc32.cc
-  src/arch-ppc64v1.cc
-  src/arch-ppc64v2.cc
-  src/arch-s390x.cc
-  src/arch-sparc64.cc
+  lib/tar.cc  
   src/arch-x86-64.cc
   src/elf.cc
   src/entry.cc
